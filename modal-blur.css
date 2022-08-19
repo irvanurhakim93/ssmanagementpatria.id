@@ -1,0 +1,50 @@
+.btn-standart {
+    background: #fc9800;
+    background: -moz-linear-gradient(top, #fc9800 1%, #ea270d 100%, #fb955e 100%, #ea5507 100%);
+    background: -webkit-linear-gradient(top, #fc9800 1%,#ea270d 100%,#fb955e 100%,#ea5507 100%);
+    background: linear-gradient(to bottom, #fc9800 1%,#ea270d 100%,#fb955e 100%,#ea5507 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc9800', endColorstr='#ea5507',GradientType=0 );
+    color: white;
+}
+.btn-standart:hover {
+    background: #ea5507;
+    background: -moz-linear-gradient(top, #ea5507 1%, #fb955e 100%, #ea270d 100%, #fc9800 100%);
+    background: -webkit-linear-gradient(top, #ea5507 1%,#fb955e 100%,#ea270d 100%,#fc9800 100%);
+    background: linear-gradient(to bottom, #ea5507 1%,#fb955e 100%,#ea270d 100%,#fc9800 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5507', endColorstr='#fc9800',GradientType=0 );
+    color: white;
+}
+body>div.bg {
+    background-image: url('http://s1.1zoom.me/big3/935/Tulips_Chrysanthemums_Candy_Colored_background_544156_5616x3744.jpg');
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  transition: all 0.3s ease-in;
+}
+body>div.content {
+
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+body.modal-open>div.bg,
+.modal-backdrop.fade.show {
+    z-index: 1;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+      background-color: #e8e8e8d9;
+}
+.modalblur {
+    margin: 20px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 0px 2px rgba(255, 255, 255, 0.6);
+}

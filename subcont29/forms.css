@@ -1,0 +1,10 @@
+.custom-form [class*="col-"].form-group {margin-left:0;margin-right:0;}
+
+.custom-form .form-group [class*="col-"] .row [class*="col-"] {
+    padding-left: .5%;
+    padding-right: .5%;
+}
+.custom-form .form-group [class*="col-"] .row {
+    margin-left: -.5%;
+    margin-right: -.5%;
+}

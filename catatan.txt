@@ -1,0 +1,73 @@
+1. yang menggunakan select box bulan adalah memfilter dan mengecualikan bulan yang telah dipilih,tp kalo mau gini..Pilih bulan yang ingin ditampilkan,bisa dengan multiple select dengan begitu menampilkan data grafik,tabel atau apapun bisa berubah sesuai pilihan
+2. Nama vendor yang tertera di tabel dapat di klik dan cuma menampilkan data yang sesuai vendor itu aja
+
+- UI untuk Quality dan Delivery sudah selesai walaupun yaa desainnya gitu masih berantakan,masih nyari cara gimana caranya tabel bisa bersebelahan dengan chart. Tapi untuk sekarang kek gini dulu.
+- Ngatur UI serapi mungkin udah beres,udah keliatan enak ngga berantakan lagi. Udah enak lah nggak mesti banget ngikutin google data studio,sekarang tinggal gimana caranya masukin raw data ke dalam chart
+
+tgl 25 feb 2022
+- Udh bisa masukin chart sekaligus data2nya secara manual.
+- Udah buat halaman cek status pengiriman,baru interfacenya
+- next tinggal hubungin php,dari koneksi ke tabel juni_zprs sama delivery_juni_2021
+
+01 Maret 2022
+- Koneksikan php dengan tabel udah beres,tinggal koneksikan php dengan chart. Yang jadi pertanyaan di database di tabel mana yang jadi tolak ukur untuk menghitung late / ontimenya suatu barang
+- Nanti siang pras bakalan ngasih tau tolak ukur dari chart itu gimana
+- Trus sisanya buat tampilan untuk si kurir biar bisa update proses pengiriman ke delivery status
+
+02 maret 2022
+- Ngelanjutin projek yang ditanggal 1,membuat formulir untuk si kurir berhasil,tapi belum terhubung ke koneksi phpnya,rencananya begini..Setelah form tersebut di input maka akan muncul file php lain untuk menunjukkan hasil inputan dari si kurir tadi
+
+7 maret 2022
+Ini adalah status delivery juga yang bakal dipampang setelah subcont menginput hasil pengiriman
+1. Setting
+2. Full Weld
+3. QC Verification
+4. Delivery
+
+update : jam 14.00
+- hasil inputan akan dimunculkan kembali di delivery status,kurir diganti jadi subcont
+- di delivery status ada searching,nah nanti hasil searching akan memunculkan hasil sesuai yang ada di file mockup ppt
+- warna background di kolom status akan beragam warnanya bergantung dengan status yang dilakukan oleh si vendor tsb
+- database akan menyusul oleh pras.
+- Di aplikasi ini akan ada dua peran / user yakni subcont dan admin internal. Berarti nanti buat halaman login masing2
+
+update : jam 16.00
+- form login baik yg subcont atau subdev sudah selesai dibuat
+
+8 maret 2022
+- form login subcont & subdev udah berhasil dibuat dan dua duanya berhasil login,tinggal nanti mau ada apa aja konten yang ada di masing masing halaman. Ini mesti dimintain mockupnya mau kek gimana
+
+14 mar 2022
+- Membuat form & modal popup untuk si update subcont sekitar 2 atau 3 halaman..Nah tinggal buat animasi next / previous pagenya itu yang masih mentok
+- Form dari tiap halaman update subcont udah berhasil,sekarang tinggal ngatur animasi yang tadi trus sama disambungin ke databasenya
+
+15 mar 2022
+- Masih mentok buat ngilangin modal hal 1 & 2 ketika udah di hal 3..Udah muter2 searching kemana mana tapi ya tetep gitu
+
+18 mar 2022
+- Login subcont & dev dialihkan ke halaman index,biar subcont ama dev bisa mengakses status delivery. Khususnya subdev bisa tau subcont udah ngapain aja
+- Delivery status cuma boleh diakses dengan subcont ama subdev aja,orang umum gaboleh ngakses (yang ini done alias beress)
+
+22 mar 2022
+- Balik lagi ke modal bootstrap yang tadi,cari jalan tuh gimana caranya biar ga ketiban..Caranya adalah : buat jquery / javascript modal hide & show..gausah pake fungsi data-dismiss="modal"
+
+20 apr 2022
+- subdev dpt mengupload performance report berekstensi pdf, dan performance report bisa di download oleh subcont.
+- buat akun subcont lebih dari satu,lalu buat database masing2 biar tiap subcont yang dibuat itu bisa akses konten performance report masing2
+
+- 21 apr 2022
+- bikin akun subcont ampe 30 biji
+- halaman update status subcont dibuat satu halaman aja,kt pak har gpp klo nanti subcont dibuat pusing jg pas ngisinya wkwkw
+- di halaman delivstat tab product item no diganti jadi quantity
+
+12 mei 2022
+- tinggal jalankan search yang ada di delivery status
+
+27 Mei 2022
+- Buat searching di halaman delivery achievement udah beres,sekarang tugas selanjutnya adalah gimana ketika searching grafik tersebut ikut berubah menunjukkan data yang sesuai dicari..
+sekarang coba menyesuaikan dulu deh dengan isi databasenya.
+
+30 mei 2022
+- Buat google sheet baru menyesuaikan subcontnya masing2,dari kolom A sampe kolom M,ibaratnya di sistem yg dibuat ini adalah tiap subcont (30 akun itu) dapat akses proses pengiriman sesuai subcontnya masing2 -- 
+Karena ini adalah termasuk sumber data dari masing2 subcont,ketika terjadi update data pun menyinkron dengan akun subcont2 lain secara realtime.
+- jadi kemungkinan ini disortir,atau dipecah dari masing masing data dari plot subcont

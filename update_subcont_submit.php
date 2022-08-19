@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php 
+include 'koneksi.php';
+
+
+$companyname = $_POST['input-name-of-company'];
+$companyaddress = $_POST['input-office-address'];
+$companyphone = $_POST['input-company-phone'];
+$companyfax = $_POST['input-company-fax'];
+$typeoffirm = $_POST['select-type-of-firm'];
+$otherfirmtype = $_POST['input-others-type-of-firm'];
+$yearofcommence = $_POST['input-year-of-commence'];
+$sistermothercompany = $_POST['input-name-of-parent-sister-company'];
+$ownerofcompany = $_POST['input-company-owner-name'];
+$ownerphonenumber = $_POST['input-company-owner-telephone-number'];
+$factoryaddress = $_POST['input-factory-address'];
+$factoryphonenumber = $_POST['input-factory-phone-number'];
+$factoryfaxnumber = $_POST['input-factory-phone-number'];
+$sizeoffactory = $_POST['input-size-of-factory'];
+$plantnumber = $_POST['input-number-of-plant'];
+$factoryownership = $_POST['input-factory-ownership'];
+$dateofrentbegin = $_POST['input-date-of-rent-begin'];
+$dateofrentend = $_POST['input-date-of-rent-end'];
+$kartap = $_POST['total-of-permanent-employees'];
+$karkon = $_POST['total-of-contract-employees'];
+$karhar = $_POST['total-of-daily-employees'];
+$karbor = $_POST['total-of-wholesale-employees'];
+$workofdays = $_POST['input-amount-of-workdays-on-weekend'];
+$jammasukshift1 = $_POST['input-jam-masuk-kerja-shift-1'];
+$jampulangshift1 = $_POST['input-jam-pulang-kerja-shift-1'];
+$jammasukshift2 = $_POST['input-jam-masuk-kerja-shift-2'];
+$jampulangshift2 = $_POST['input-jam-pulang-kerja-shift-2'];
+$jammasukshift3 = $_POST['input-jam-masuk-kerja-shift-3'];
+$jampulangshift3 = $_POST['input-jam-pulang-kerja-shift-3'];
+$jumlahoverheadcrane = $_POST['input-quantity-crane'];
+$capacityoverheadcrane = $_POST['input-capacity-crane'];
+$jumlahforklift = $_POST['input-forklift-quantity'];
+$capacityforklift = $_POST['input-forklift-capacity'];
+$gmaw = $_POST['input-gmaw'];
+$smaw = $_POST['input-smaw'];
+$gtaw = $_POST['input-gtaw'];
+$saw = $_POST['input-saw'];
+$otherswelding = $_POST['input-others-quantity-machine'];
+$materialthicknessminmm = $_POST['input-cutting-machine-1-min-mm'];
+$materialthicknessminmm2 = $_POST['input-cutting-machine-2-min-mm'];
+$materialthicknessminmm3 = $_POST['input-cutting-machine-3-min-mm'];
+$materialthicknessminmm4 = $_POST['input-cutting-machine-4-min-mm'];
+$materialthicknessminmm5 = $_POST['input-cutting-machine-5-min-mm'];
+$materialthicknessmaxmm1 = $_POST['input-cutting-machine-1-max-mm'];
+$materialthicknessmaxmm2 = $_POST['input-cutting-machine-2-max-mm'];
+$materialthicknessmaxmm3 = $_POST['input-cutting-machine-3-max-mm'];
+$materialthicknessmaxmm4 = $_POST['input-cutting-machine-4-max-mm'];
+$materialthicknessmaxmm5 = $_POST['input-cutting-machine-5-max-mm'];
+$materialmildsteel = $_POST['input-cutting-machine-1-mild-steel'];
+$materialmildsteel2 = $_POST['input-cutting-machine-2-mild-steel'];
+$materialmildsteel3 = $_POST['input-cutting-machine-3-mild-steel'];
+$materialmildsteel4 = $_POST['input-cutting-machine-4-mild-steel'];
+$materialmildsteel5 = $_POST['input-cutting-machine-5-mild-steel'];
+$materialstainlessteel = $_POST['input-cutting-machine-1-stainless-steel'];
+$materialstainlessteel2 = $_POST['input-cutting-machine-2-stainless-steel'];
+$materialstainlessteel3 = $_POST['input-cutting-machine-3-stainless-steel'];
+$materialstainlessteel4 = $_POST['input-cutting-machine-4-stainless-steel'];
+$materialstainlessteel5 = $_POST['input-cutting-machine-5-stainless-steel'];
+$widthcuttingmm = $_POST['input-cutting-machine-1-effective-width-cutting'];
+$widthcuttingmm2 = $_POST['input-cutting-machine-2-effective-width-cutting'];
+$widthcuttingmm3 = $_POST['input-cutting-machine-3-effective-width-cutting'];
+$widthcuttingmm4 = $_POST['input-cutting-machine-4-effective-width-cutting'];
+$widthcuttingmm5 = $_POST['input-cutting-machine-5-effective-width-cutting'];
+$lengthcuttingmm = $_POST['input-cutting-machine-1-effective-length-cutting'];
+$lengthcuttingmm2 = $_POST['input-cutting-machine-2-effective-length-cutting'];
+$lengthcuttingmm3 = $_POST['input-cutting-machine-3-effective-length-cutting'];
+$lengthcuttingmm4 = $_POST['input-cutting-machine-4-effective-length-cutting'];
+$lengthcuttingmm5 = $_POST['input-cutting-machine-5-effective-length-cutting'];
+$bevelcutting = $_POST['input-cutting-machine-1-bevel-cutting'];
+$bevelcutting2 = $_POST['input-cutting-machine-2-bevel-cutting'];
+$bevelcutting3 = $_POST['input-cutting-machine-3-bevel-cutting'];
+$bevelcutting4 = $_POST['input-cutting-machine-4-bevel-cutting'];
+$bevelcutting5 = $_POST['input-cutting-machine-5-bevel-cutting'];
+$powersource = $_POST['input-power-source-1'];
+$powersource2 = $_POST['input-power-source-2'];
+$powersource3 = $_POST['input-power-source-3'];
+$powersource4 = $_POST['input-power-source-4'];
+$powersource5 = $_POST['input-power-source-5'];
+$bendingthicknessminmm = $_POST['input-bending-machine-1-min-mm'];
+$bendingthicknessminmm2 = $_POST['input-bending-machine-2-min-mm'];
+$bendingthicknessminmm3 = $_POST['input-bending-machine-3-min-mm'];
+$bendingthicknessminmm4 = $_POST['input-bending-machine-4-min-mm'];
+$bendingthicknessminmm5 = $_POST['input-bending-machine-1-min-mm'];
+$bendingthicknessmaxmm = $_POST['input-bending-machine-1-max-mm'];
+$bendingthicknessmaxmm2 = $_POST['input-bending-machine-2-max-mm'];
+$bendingthicknessmaxmm3 = $_POST['input-bending-machine-3-max-mm'];
+$bendingthicknessmaxmm4 = $_POST['input-bending-machine-4-max-mm'];
+$bendingthicknessmaxmm5 = $_POST['input-bending-machine-5-max-mm'];
+$bendingmildsteel = $_POST['input-bending-machine-1-mild-steel'];
+$bendingmildsteel2 = $_POST['input-bending-machine-2-mild-steel'];
+$bendingmildsteel3 = $_POST['input-bending-machine-3-mild-steel'];
+$bendingmildsteel4 = $_POST['input-bending-machine-4-mild-steel'];
+$bendingmildsteel5 = $_POST['input-bending-machine-5-mild-steel'];
+$bendingstainlessteel = $_POST['input-bending-machine-1-stainless-steel'];
+$bendingstainlessteel2 = $_POST['input-bending-machine-2-stainless-steel'];
+$bendingstainlessteel3 = $_POST['input-bending-machine-3-stainless-steel'];
+$bendingstainlessteel4 = $_POST['input-bending-machine-4-stainless-steel'];
+$bendingstainlessteel5 = $_POST['input-bending-machine-5-stainless-steel'];
+$bendingwidthcutting = $_POST['input-bending-machine-1-effective-width-cutting'];
+$bendingwidthcutting2 = $_POST['input-bending-machine-2-effective-width-cutting'];
+$bendingwidthcutting3 = $_POST['input-bending-machine-3-effective-width-cutting'];
+$bendingwidthcutting4 = $_POST['input-bending-machine-4-effective-width-cutting'];
+$bendingwidthcutting5 = $_POST['input-bending-machine-5-effective-width-cutting'];
+$bendinglengthcutting = $_POST['input-bending-machine-1-effective-length-cutting'];
+$bendinglengthcutting2 = $_POST['input-bending-machine-2-effective-length-cutting'];
+$bendinglengthcutting3 = $_POST['input-bending-machine-3-effective-length-cutting'];
+$bendinglengthcutting4 = $_POST['input-bending-machine-4-effective-length-cutting'];
+$bendinglengthcutting5 = $_POST['input-bending-machine-5-effective-length-cutting'];
+$bendingtonage = $_POST['input-bending-machine-1-tonage'];
+$bendingtonage2 = $_POST['input-bending-machine-2-tonage'];
+$bendingtonage3 = $_POST['input-bending-machine-3-tonage'];
+$bendingtonage4 = $_POST['input-bending-machine-4-tonage'];
+$bendingtonage5 = $_POST['input-bending-machine-5-tonage'];
+$bendingradius = $_POST['input-bending-machine-1-radius-bending'];
+$bendingradius2 = $_POST['input-bending-machine-2-radius-bending'];
+$bendingradius3 = $_POST['input-bending-machine-3-radius-bending'];
+$bendingradius4 = $_POST['input-bending-machine-4-radius-bending'];
+$bendingradius5 = $_POST['input-bending-machine-5-radius-bending'];
+$rollbendingthicknessminmm = $_POST['input-roll-bending-machine-1-min-mm'];
+$rollbendingthicknessminm2 = $_POST['input-roll-bending-machine-2-min-mm'];
+$rollbendingthicknessminm3 = $_POST['input-roll-bending-machine-3-min-mm'];
+$rollbendingthicknessminm4 = $_POST['input-roll-bending-machine-4-min-mm'];
+$rollbendingthicknessminm5 = $_POST['input-roll-bending-machine-5-min-mm'];
+$rollbendingthicknessmaxmm = $_POST['input-roll-bending-machine-1-max-mm'];
+$rollbendingthicknessmaxmm2 = $_POST['input-roll-bending-machine-2-max-mm'];
+$rollbendingthicknessmaxmm3 = $_POST['input-roll-bending-machine-3-max-mm'];
+$rollbendingthicknessmaxmm4 = $_POST['input-roll-bending-machine-4-max-mm'];
+$rollbendingthicknessmaxmm5 = $_POST['input-roll-bending-machine-5-max-mm'];
+$rollbendingmildsteel = $_POST['input-roll-bending-machine-1-mild-steel'];
+$rollbendingmildsteel2 = $_POST['input-roll-bending-machine-2-mild-steel'];
+$rollbendingmildsteel3 = $_POST['input-roll-bending-machine-3-mild-steel'];
+$rollbendingmildsteel4 = $_POST['input-roll-bending-machine-4-mild-steel'];
+$rollbendingmildsteel5 = $_POST['input-roll-bending-machine-1-mild-steel'];
+$rollbendingstainlessteel = $_POST['input-roll-bending-machine-1-stainless-steel'];
+$rollbendingstainlessteel2 = $_POST['input-roll-bending-machine-2-stainless-steel'];
+$rollbendingstainlessteel3 = $_POST['input-roll-bending-machine-3-stainless-steel'];
+$rollbendingstainlessteel4 = $_POST['input-roll-bending-machine-4-stainless-steel'];
+$rollbendingstainlessteel5 = $_POST['input-roll-bending-machine-5-stainless-steel'];
+$rollbendingwidthcutting = $_POST['input-roll-bending-machine-1-effective-width-cutting'];
+$rollbendingwidthcutting2 = $_POST['input-roll-bending-machine-2-effective-width-cutting'];
+$rollbendingwidthcutting3 = $_POST['input-roll-bending-machine-3-effective-width-cutting'];
+$rollbendingwidthcutting4 = $_POST['input-roll-bending-machine-4-effective-width-cutting'];
+$rollbendingwidthcutting5 = $_POST['input-roll-bending-machine-5-effective-width-cutting'];
+$rollbendinglengthcutting = $_POST['input-roll-bending-machine-1-effective-length-cutting'];
+$rollbendinglengthcutting2 = $_POST['input-roll-bending-machine-2-effective-length-cutting'];
+$rollbendinglengthcutting3 = $_POST['input-roll-bending-machine-3-effective-length-cutting'];
+$rollbendinglengthcutting4 = $_POST['input-roll-bending-machine-4-effective-length-cutting'];
+$rollbendinglengthcutting5 = $_POST['input-roll-bending-machine-5-effective-length-cutting'];
+$rollbendingtonage = $_POST['input-roll-bending-machine-1-tonage'];
+$rollbendingtonage2 = $_POST['input-roll-bending-machine-2-tonage'];
+$rollbendingtonage3 = $_POST['input-roll-bending-machine-3-tonage'];
+$rollbendingtonage4 = $_POST['input-roll-bending-machine-4-tonage'];
+$rollbendingtonage5 = $_POST['input-roll-bending-machine-5-tonage'];
+$rollbendingradius = $_POST['input-roll-bending-machine-1-radius-bending'];
+$rollbendingradius2 = $_POST['input-roll-bending-machine-2-radius-bending'];
+$rollbendingradius3 = $_POST['input-roll-bending-machine-3-radius-bending'];
+$rollbendingradius4 = $_POST['input-roll-bending-machine-4-radius-bending'];
+$rollbendingradius5 = $_POST['input-roll-bending-machine-5-radius-bending'];
+$lathemaxdiametermm = $_POST['input-lathe-machine-1-max-mm'];
+$lathemaxdiametermm2 = $_POST['input-lathe-machine-2-max-mm'];
+$lathemaxdiametermm3 = $_POST['input-lathe-machine-3-max-mm'];
+$lathemaxdiametermm4 = $_POST['input-lathe-machine-4-max-mm'];
+$lathemaxdiametermm5 = $_POST['input-lathe-machine-5-max-mm'];
+$lathemaxwork = $_POST['input-lathe-machine-1-max-work-piece-length'];
+$lathemaxwork2 = $_POST['input-lathe-machine-2-max-work-piece-length'];
+$lathemaxwork3 = $_POST['input-lathe-machine-3-max-work-piece-length'];
+$lathemaxwork4 = $_POST['input-lathe-machine-4-max-work-piece-length'];
+$lathemaxwork5 = $_POST['input-lathe-machine-5-max-work-piece-length'];
+
+
+
+?>
+</body>
+</html>
